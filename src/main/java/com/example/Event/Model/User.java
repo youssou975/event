@@ -20,8 +20,8 @@ public class User {
     private Role role;
 
     public enum Role {
-        Participant,
-        Organisateur
+        PARTICIPANT,
+        ORGANISATEUR,
     }
 
     public User() {}

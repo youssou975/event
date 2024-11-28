@@ -1,5 +1,6 @@
 package com.example.Event.Model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
@@ -10,6 +11,8 @@ public class Event {
     private int idEvent;
     private String titre;
     private String lieu;
+    @JsonFormat(pattern = "dd-MM-yyyy")  // Format pour LocalDate
+
     private LocalDate dateEvent;
     private int capacite;
 
@@ -68,5 +71,11 @@ public class Event {
         this.capacite = capacite;
     }
 
+    public void setOrganisateur(Organisateur organisateur) {
+        this.organisateur = organisateur;
+    }
 
+    public Organisateur getOrganisateur() {
+        return organisateur;
+    }
 }
